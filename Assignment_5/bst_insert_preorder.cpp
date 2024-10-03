@@ -46,19 +46,6 @@ void preorder(Node* root){
 	preorder(root->right);
 }
 
-void flip(Node* root){
-	if(root == nullptr){
-		return;
-	}
-
-	Node* temp = root->left;
-	root->left = root->right;
-	root->right = temp;
-
-	flip(root->left);
-	flip(root->right);
-}
-
 int main(){
 
 	Node* root = nullptr;
@@ -73,16 +60,6 @@ int main(){
 	cout<<endl;
 
 	cout<<"Pre-Order Traversal of the BST: ";
-	preorder(root);
-	cout<<endl;
-
-	flip(root);
-
-	cout<<"In-Order Traversal of the flipped BST: ";
-	inorder(root);
-	cout<<endl;
-
-	cout<<"Pre-Order Traversal of the flipped BST: ";
 	preorder(root);
 	cout<<endl;
 
