@@ -49,12 +49,26 @@ void preorder(Node* root){
 int main(){
 
 	Node* root = nullptr;
+	
+	int n, value;
+	// Take input from the user for the number of elements to insert
+    	cout << "Enter the number of elements to insert into the BST: ";
+    	cin >> n;
 
+	 // Take input for the values and insert them into the BST
+    	cout << "Enter the values to insert into the BST: " << endl;
+    	for (int i = 0; i < n; i++) {
+        	cin >> value;
+   		root = insert(root, value);
+    	}
+
+	/*
 	root = insert(root, 50);
 	root = insert(root, 40);
 	root = insert(root, 1);
 	root = insert(root, 100);
-	
+	*/
+
 	cout<<"In-order Traversal of the BST: ";
 	inorder(root);
 	cout<<endl;

@@ -83,14 +83,26 @@ void fillFlippedStructure(Node* root, vector<int>& keys, int& index){
 int main(){
 
 	Node* root = nullptr;
+	int n, value;
 
+	// Take input from the user for the number of elements to insert
+    	cout << "Enter the number of elements to insert into the BST: ";
+    	cin >> n;
+
+    	// Take input for the values and insert them into the BST
+    	cout << "Enter the values to insert into the BST: " << endl;
+    	for (int i = 0; i < n; i++) {
+        	cin >> value;
+        	root = insert(root, value);
+    	}
+	/*
 	root = insert(root, 4);
 	root = insert(root, 5);
 	root = insert(root, 9);
 	root = insert(root, 2);
 	root = insert(root, 12);
 	root = insert(root, 6);
-	
+	*/
 	vector<int> keys;
         extractinorderkeys(root, keys);
 

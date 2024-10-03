@@ -67,7 +67,20 @@ void flip(Node* root) {
 
 int main(){
 	Node* root = nullptr;
-	
+	int n,value;
+
+	// Take input from the user for the number of elements to insert
+    	cout << "Enter the number of elements to insert into the BST: ";
+    	cin >> n;
+
+    	// Take input for the values and insert them into the BST
+    	cout << "Enter the values to insert into the BST: " << endl;
+    	for (int i = 0; i < n; i++) {
+        	cin >> value;
+        	root = insert(root, value);
+    	}
+
+	/*	
 	root = insert(root, 50);
 	root = insert(root, 30);
 	root = insert(root, 20);
@@ -75,7 +88,7 @@ int main(){
     	root = insert(root, 70);
     	root = insert(root, 60);
     	root = insert(root, 80);
-
+	*/
     	// Print the in-order traversal of the BST
     	cout << "In-order traversal of the BST: ";
     	inorder(root);
